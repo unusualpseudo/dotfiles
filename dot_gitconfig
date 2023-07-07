@@ -1,0 +1,27 @@
+[user]
+  email = spik3spiegel@proton.me
+  name = unusualpseudo
+  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMXNU/Lt9esC8WL5I0GXwop3mS92S2grZcTxhN8fh1m
+[commit]
+  template = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMXNU/Lt9esC8WL5I0GXwop3mS92S2grZcTxhN8fh1m
+  gpgSign = true
+[gpg]
+  format = ssh
+[push]
+  autoSetupRemote = true
+[url "ssh://git@github.com/"]
+  pushInsteadOf = https://github.com/
+[pull]
+  rebase = true
+[status]
+  submoduleSummary = false  
+[core]
+  editor = nano
+  excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+[alias]
+  b = branch
+  c = commit
+  ca = commit --amend
+  ol = log --pretty=oneline
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  s = status -sb
