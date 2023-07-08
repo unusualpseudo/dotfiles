@@ -3,7 +3,6 @@
   name = unusualpseudo
   signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMXNU/Lt9esC8WL5I0GXwop3mS92S2grZcTxhN8fh1m
 [commit]
-  template = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICMXNU/Lt9esC8WL5I0GXwop3mS92S2grZcTxhN8fh1m
   gpgSign = true
 [gpg]
   format = ssh

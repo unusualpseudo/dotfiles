@@ -12,5 +12,4 @@ if [ ! "$(command -v chezmoi)" ]; then
     echo "To install chezmoi, you must have curl or wget installed." >&2
     exit 1
   fi
-  unset bin_dir
 fi
