@@ -4,7 +4,7 @@ set -eufo pipefail
 
 {{ $packages := list
      "thunderbird" -}}
-     
+
 {{ $snaps := list "" -}}
 
 {{ $sudo := "sudo " -}}
@@ -14,6 +14,8 @@ set -eufo pipefail
 
 
 {{ $sudo }}apt-get remove -y {{ $packages | join " " }}
+
+{{ $sudo }} apt autoremove -y
 
 {{ if lookPath "snap" }}
 {{   range $snaps }}
