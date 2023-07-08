@@ -1,4 +1,3 @@
-{{ if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 set -eufo pipefail
 
@@ -30,4 +29,3 @@ if [ $SHELL != $(which fish) ]; then
 fi
 
 echo -e "\0033[0;32m>>>>> Finish Setting Up Fish Shell <<<<<\033[0m"
-{{ end -}}
