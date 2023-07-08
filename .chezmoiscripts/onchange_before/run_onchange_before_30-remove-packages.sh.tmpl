@@ -5,10 +5,9 @@ set -eufo pipefail
 
 echo -e "\033[0;32m>>>>> Begin Removing Ubuntu Packages <<<<<\033[0m"
 
-{{ $packages := list
-     "thunderbird" -}}
+{{ $packages := list -}}
 
-{{ $snaps := list "" -}}
+{{ $snaps := list  -}}
 
 {{ $sudo := "sudo " -}}
 {{ if eq .chezmoi.username "root" -}}
