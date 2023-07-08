@@ -1,0 +1,82 @@
+# git
+if type -q git
+    abbr g 'git'
+    abbr ga 'git add .'
+    abbr gaa 'git add --all'
+    abbr gc 'git commit'
+    abbr gcm 'git commit -m'
+    abbr gs 'git status'
+    abbr gp 'git push'
+    abbr gpl 'git pull'
+    abbr gl 'git log'
+    abbr gd 'git diff'
+    abbr gds 'git diff --staged'
+    abbr gr 'git restore .'
+    abbr grs 'git restore --staged .'
+    abbr gcd='cd (git rev-parse --show-toplevel)'
+end
+
+# kubectl
+if type -q kubectl
+    abbr k 'kubectl'
+    abbr kgp 'kubectl get pods'
+    abbr kl 'kubectl logs'
+    abbr kdp 'kubectl describe pod'
+    abbr kdn 'kubectl describe node'
+    abbr kgn 'kubectl get nodes'
+    abbr wkgp 'hwatch -- kubectl get pod'
+    abbr kx 'kubectl exec -it'
+end
+
+# chezmoi
+if type -q chezmoi
+    abbr c 'chezmoi'
+    abbr ca 'chezmoi apply'
+    abbr cu 'chezmoi update'
+    abbr ce 'chezmoi edit'
+    abbr cs 'chezmoi status'
+    abbr cc 'chezmoi cd'
+end
+
+# k9s
+if type -q k9s
+    abbr ks 'k9s'
+  end
+
+# the fuck
+if type -q thefuck
+    abbr fu 'fuck'
+end
+
+# apt
+if type -q apt
+{{- if ne .chezmoi.username "root" }}
+    abbr apti 'sudo apt install'
+    abbr aptr 'sudo apt remove'
+    abbr aptu 'sudo apt update'
+    abbr aptug 'sudo apt update && sudo apt upgrade'
+{{- else }}
+    abbr apti 'apt install'
+    abbr aptr 'apt remove'
+    abbr aptu 'apt update'
+    abbr aptug 'apt update && sudo apt upgrade'
+{{- end }}
+end
+
+
+# basic abbreviations
+abbr df 'df -h'                          # human-readable sizes
+abbr free 'free -m'                      # show sizes in MB
+abbr .. 'cd ..'
+abbr ... 'cd ../..'
+abbr .3 'cd ../../..'
+abbr .4 'cd ../../../..'
+abbr .5 'cd ../../../../..'
+
+
+# Colorize grep output
+abbr grep 'grep --color=auto'
+
+
+# edit config files
+abbr ebash '$EDITOR $HOME/.bashrc'

@@ -17,10 +17,3 @@
 [core]
   editor = nano
   excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
-[alias]
-  b = branch
-  c = commit
-  ca = commit --amend
-  ol = log --pretty=oneline
-  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  s = status -sb
