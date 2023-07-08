@@ -2,6 +2,9 @@
 
 set -eufo pipefail
 
+
+echo -e "\033[0;32m>>>>> Begin Removing Ubuntu Packages <<<<<\033[0m"
+
 {{ $packages := list
      "thunderbird" -}}
 
@@ -22,3 +25,5 @@ set -eufo pipefail
 snap info {{ . }} && {{ $sudo }}snap remove {{ . }}
 {{   end }}
 {{ end }}
+
+echo -e "\033[0;32m>>>>> Finish Removing Ubuntu Packages <<<<<\033[0m"
