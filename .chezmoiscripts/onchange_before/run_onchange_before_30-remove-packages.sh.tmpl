@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $packages := list
+     "thunderbird" -}}
+     
+{{ $snaps := list "" -}}
+
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+
+{{ $sudo }}apt-get remove -y {{ $packages | join " " }}
+
+{{ if lookPath "snap" }}
+{{   range $snaps }}
+snap info {{ . }} && {{ $sudo }}snap remove {{ . }}
+{{   end }}
+{{ end }}
