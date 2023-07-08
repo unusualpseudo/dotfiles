@@ -4,6 +4,8 @@ set -eufo pipefail
 
 echo -e "\033[0;32m>>>>> Begin Setting Up Ubuntu Packages <<<<<\033[0m"
 
+
+
 # List of ppa repositories to add
 repositories=(
   ppa:git-core/ppa
@@ -11,10 +13,16 @@ repositories=(
 
 # List of packages to install
 packages=(
-  curl
-  git
-  thefuck
+  build-essential
+  software-properties-common
+  openssh-server
+  direnv
+  net-tools
   unzip
+  thefuck
+  bat
+  jq
+  tmux
   bat
 )
 

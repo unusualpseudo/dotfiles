@@ -2,6 +2,17 @@
 
 set -e # -e: exit on error
 
+
+function initialize_linux() {
+  sudo apt update
+  sudo apt install \
+    ca-certificates \
+    git \
+    curl \
+    wget
+}
+
+
 if [ ! "$(command -v chezmoi)" ]; then
   bin_dir="$HOME/.local/bin"
   if [ "$(command -v curl)" ]; then
