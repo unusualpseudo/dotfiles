@@ -74,6 +74,10 @@ if type -q apt
 {{- end }}
 end
 
+# easy workspace access
+abbr cw 'cd $HOME/workspace'
+
+
 
 # basic abbreviations
 abbr df 'df -h'                          # human-readable sizes
@@ -83,7 +87,9 @@ abbr ... 'cd ../..'
 abbr .3 'cd ../../..'
 abbr .4 'cd ../../../..'
 abbr .5 'cd ../../../../..'
+
 abbr ls 'exa -lag --header'
+abbr cat 'bat'
 
 # Colorize grep output
 abbr grep 'grep --color=auto'
@@ -91,3 +97,4 @@ abbr grep 'grep --color=auto'
 
 # edit config files
 abbr ebash '$EDITOR $HOME/.bashrc'
+
