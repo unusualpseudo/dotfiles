@@ -2,6 +2,8 @@
 
 set -e # -e: exit on error
 
+echo -e "\033[0;32m>>>>> Installing chezmoi <<<<<\033[0m"
+
 initialize_linux() {
   sudo apt update -y
   sudo apt install -y \
@@ -35,6 +37,8 @@ echo "Script directory " $script_dir
 # exec: replace current process with chezmoi init
 exec "$chezmoi" init --apply "--source=$script_dir"
 
+
+echo -e "\033[0;32m>>>>> Your dotfiles are ready!  <<<<<\033[0m"
 
 
 
