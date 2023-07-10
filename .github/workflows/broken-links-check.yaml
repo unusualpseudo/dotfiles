@@ -1,5 +1,5 @@
 ---
-name: Broken link check
+name: Broken links check
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   check:
-    name: Check
+    name: Check links check
     runs-on: ubuntu-latest
     steps:
       - name: Generate token

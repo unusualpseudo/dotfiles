@@ -1,7 +1,9 @@
 My dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi)
 
         chezmoi init unusualpseudo
-        
+
+![Broken links checks](https://github.com/unusualpseudo/dotfiles/actions/workflows/broken-links-check.yaml/badge.svg)
+
 ## Tools
 
 - [fish](https://github.com/fish-shell/fish-shell)
