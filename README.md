@@ -1,8 +1,12 @@
-My dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi)
-
-        chezmoi init unusualpseudo
+# dotfiles
 
 ![Broken links checks](https://github.com/unusualpseudo/dotfiles/actions/workflows/broken-links-check.yaml/badge.svg)
+
+My dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi)
+
+```shell
+chezmoi init unusualpseudo
+```
 
 ## Tools
 
@@ -14,6 +18,6 @@ My dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi)
 
 ## TODO
 
-    - [] 1Password integration
-    - [] Tmux configuration
-    - [] SSH configuration
+- [] 1Password integration
+- [] Tmux configuration
+- [] SSH configuration
