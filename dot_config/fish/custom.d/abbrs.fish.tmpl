@@ -61,6 +61,14 @@ if type -q batcat
 end
 
 
+# tmux
+if type -q tmux
+    abbr ta 'tmux attach -t'
+    abbr tn 'tmux new -s'
+    abbr tl 'tmux ls'
+    abbr tk 'tmux kill-session -t'
+end
+
 # apt
 if type -q apt
 {{- if ne .chezmoi.username "root" }}
@@ -94,7 +102,3 @@ abbr ls 'exa -lag --header'
 
 # Colorize grep output
 abbr grep 'grep --color=auto'
-
-
-# edit config files
-abbr ebash '$EDITOR $HOME/.bashrc'

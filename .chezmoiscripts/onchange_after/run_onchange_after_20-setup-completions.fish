@@ -42,4 +42,9 @@ if type -q task
   curl --silent --show-error https://raw.githubusercontent.com/go-task/task/master/completion/fish/task.fish > $__fish_config_dir/completions/task.fish
 end
 
+if type -q alacritty
+  echo "Setting up alacritty completion"
+  curl --silent --show-error https://raw.githubusercontent.com/alacritty/alacritty/master/extra/completions/alacritty.fish > $__fish_config_dir/completions/task.fish
+end
+
 echo -e "\033[0;32m>>>>> Finish Setting Fish Completions <<<<<\033[0m"
