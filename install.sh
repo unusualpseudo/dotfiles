@@ -3,22 +3,8 @@
 set -e # -e: exit on error
 
 echo -e "\033[0;32m>>>>> Installing chezmoi <<<<<\033[0m"
-
-initialize_linux() {
-  sudo apt update -y
-  sudo apt install -y \
-    ca-certificates \
-    git \
-    curl \
-    wget
-}
-
-
-initialize_linux
-
 if [ ! "$(command -v chezmoi)" ]; then
   bin_dir="$HOME/.local/bin"
-  chezmoi= "$bin_dir/chezmoi"
   if [ "$(command -v curl)" ]; then
     sh -c "$(curl -fsSL https://git.io/chezmoi)" -- -b "$bin_dir"
   elif [ "$(command -v wget)" ]; then
