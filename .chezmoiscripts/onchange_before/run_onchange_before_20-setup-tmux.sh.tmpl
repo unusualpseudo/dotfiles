@@ -1,0 +1,12 @@
+#!/bin/bash
+set -eufo pipefail
+
+echo -e "\0033[0;32m>>>>> Setting Up Tmux Package Manger <<<<<\033[0m"
+
+# Set fish as default shell
+if type tmux &> /dev/null; then
+  echo "Installing tpm"
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+echo -e "\0033[0;32m>>>>> Finish Setting Up Package Manger <<<<<\033[0m"
