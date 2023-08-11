@@ -1,0 +1,10 @@
+---
+env:
+  TERM: alacritty
+
+
+window:
+  decoration: "None"
+
+shell:
+  program: /bin/fish
