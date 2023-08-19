@@ -15,3 +15,5 @@ chezmoi init unusualpseudo
 - [exa](https://github.com/ogham/exa)
 - [bat](https://github.com/sharkdp/bat)
 - [fzf](https://github.com/junegunn/fzf)
+- [vim](https://www.lazyvim.org/)
+
