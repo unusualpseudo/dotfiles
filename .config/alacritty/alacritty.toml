@@ -1,0 +1,39 @@
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+builtin_box_drawing = true
+size = 16.0
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "Regular"
+
+[shell]
+program = "/bin/fish"
+
+[window]
+decorations = "None"
+startup_mode = "Fullscreen"
+opacity = 0.95
+

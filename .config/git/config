@@ -1,0 +1,20 @@
+[user]
+  email = hatimahadri@proton.me 
+  name = unusualpseudo
+  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEcoqicd4MfvC5G2eqbLVFzlu+q3wye3SBBgQcSP0iM hatimahadri@proton.me
+[commit]
+  gpgSign = true
+[gpg]
+  format = ssh
+[push]
+  autoSetupRemote = true
+[url "ssh://git@github.com/"]
+  pushInsteadOf = https://github.com/
+[pull]
+  rebase = true
+[status]
+  submoduleSummary = false  
+[core]
+  editor = nvim 
+  #FIXIT
+  #excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global

@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+  restore:
+    desc: "Check preconditions and restore dotfiles"
+    preconditions:
+      - command -v tmux &> /dev/null
+      - command -v fish &> /dev/null
+      - command -v nvim &> /dev/null
+      - command -v python3 &> /dev/null
+      - command -v batcat &> /dev/null
+      - command -v exa &> /dev/null
+      - command -v k9s &> /dev/null
+      - command -v direnv &> /dev/null
+      - command -v mackup &> /dev/null
+      - command -v starship &> /dev/null
+      - command -v alacritty &> /dev/null
+      - command -v thefuck &> /dev/null
+    cmds:
+      - mackup restore
+  
+  fish:
+    desc: "Setup fish shell"
+    cmds:
+      - chsh -s $(which fish)
+      - curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+      - fisher update 
