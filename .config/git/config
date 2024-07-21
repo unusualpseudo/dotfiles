@@ -16,5 +16,4 @@
   submoduleSummary = false  
 [core]
   editor = nvim 
-  #FIXIT
-  #excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+
