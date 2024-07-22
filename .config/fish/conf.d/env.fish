@@ -18,4 +18,5 @@ set PATH /usr/local/bin $PATH
 set -gx PATH $PATH "$HOME/bin" # temporary executables
 set -gx PATH "$HOME/.local/bin" $PATH
 set PATH $HOME/.cargo/bin $PATH
+set PATH /opt/nvim-linux64/bin $PATH
 set PATH /usr/local/go/bin $PATH
