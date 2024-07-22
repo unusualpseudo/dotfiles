@@ -68,7 +68,8 @@ end
 # easy workspace access
 abbr cw 'cd $HOME/workspace'
 abbr dl 'cd $HOME/Downloads/'
-
+abbr dotfiles 'nvim $HOME/workspace/dotfiles/'
+abbr nexus 'nvim $HOME/workspace/nexus/'
 
 # basic abbreviations
 abbr df 'df -h' # human-readable sizes

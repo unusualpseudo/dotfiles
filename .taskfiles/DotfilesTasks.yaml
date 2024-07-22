@@ -1,6 +1,12 @@
-version: '3'
+version: "3"
 
 tasks:
+  setup:
+    cmds:
+      - task: restore
+      - task: fish
+      - task: tmux
+
   restore:
     desc: "Check preconditions and restore dotfiles"
     preconditions:
@@ -18,10 +24,18 @@ tasks:
       - command -v thefuck &> /dev/null
     cmds:
       - mackup restore
-  
+
   fish:
     desc: "Setup fish shell"
     cmds:
       - chsh -s $(which fish)
-      - curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-      - fisher update 
+      - curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | fish
+      - fish -c 'fisher install jorgebucaran/fisher'
+      - fish -c 'fisher update'
+
+  tmux:
+    desc: "Setup tmux"
+    preconditions:
+      - sh: "test -f  ~/.tmux/plugins/tpm"
+    cmds:
+      - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
