@@ -12,7 +12,6 @@ tasks:
     preconditions:
       - command -v tmux &> /dev/null
       - command -v fish &> /dev/null
-      - command -v nvim &> /dev/null
       - command -v python3 &> /dev/null
       - command -v batcat &> /dev/null
       - command -v exa &> /dev/null

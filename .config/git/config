@@ -15,5 +15,5 @@
 [status]
   submoduleSummary = false  
 [core]
-  editor = nvim 
+  editor = vim 
 
