@@ -1,7 +1,7 @@
 [user]
   email = hatimahadri@proton.me 
   name = unusualpseudo
-  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEcoqicd4MfvC5G2eqbLVFzlu+q3wye3SBBgQcSP0iM hatimahadri@proton.me
+  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB+aSkPCX094YZ/QDdmnatz6vdT58i8GrU7+4miIgNA6 hatimahadri@proton.me
 [commit]
   gpgSign = true
 [gpg]

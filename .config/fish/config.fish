@@ -1,5 +1,6 @@
 
-## Source custom configs
+
+# source custom configs
 for file in $__fish_config_dir/conf.d/*.fish
     source $file
 end
@@ -9,7 +10,7 @@ if test -d $__fish_config_dir/functions
     set -gp fish_function_path $__fish_config_dir/functions
 end
 
-## Launch Starship prompt
+# launch Starship prompt
 if type -q starship
     starship init fish | source
 end

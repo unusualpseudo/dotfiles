@@ -1,40 +1,31 @@
 version: "3"
 
+vars:
+  SCRIPTS_DIR : "{{.ROOT_DIR}}/scripts"
+
+
 tasks:
   setup:
     cmds:
-      - task: restore
-      - task: fish
-      - task: tmux
+      - task: sync
+      - task: fish-shell
+      - task: tmux-plugins
 
-  restore:
-    desc: "Check preconditions and restore dotfiles"
-    preconditions:
-      - command -v tmux &> /dev/null
-      - command -v fish &> /dev/null
-      - command -v python3 &> /dev/null
-      - command -v batcat &> /dev/null
-      - command -v exa &> /dev/null
-      - command -v k9s &> /dev/null
-      - command -v direnv &> /dev/null
-      - command -v mackup &> /dev/null
-      - command -v starship &> /dev/null
-      - command -v alacritty &> /dev/null
-      - command -v thefuck &> /dev/null
+  sync:
+    desc: "sync local config folder with home config folder"
     cmds:
-      - mackup restore
+      - chmod +x "{{.SCRIPTS_DIR}}/sync-config.sh"
+      - "{{.SCRIPTS_DIR}}/sync-config.sh"
 
-  fish:
-    desc: "Setup fish shell"
+
+  fish-shell:
+    desc: "change default shell"
     cmds:
       - chsh -s $(which fish)
-      - curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | fish
-      - fish -c 'fisher install jorgebucaran/fisher'
-      - fish -c 'fisher update'
 
-  tmux:
-    desc: "Setup tmux"
+  tmux-plugins:
+    desc: "setup tmux"
     preconditions:
-      - sh: "test -f  ~/.tmux/plugins/tpm"
+      - sh: "! test -f  ~/.tmux/plugins/tpm"
     cmds:
       - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
