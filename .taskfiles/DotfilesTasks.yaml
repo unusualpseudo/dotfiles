@@ -9,7 +9,6 @@ tasks:
     cmds:
       - task: sync
       - task: fish-shell
-      - task: tmux-plugins
 
   sync:
     desc: "sync local config folder with home config folder"
@@ -23,9 +22,3 @@ tasks:
     cmds:
       - chsh -s $(which fish)
 
-  tmux-plugins:
-    desc: "setup tmux"
-    preconditions:
-      - sh: "! test -f  ~/.tmux/plugins/tpm"
-    cmds:
-      - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
