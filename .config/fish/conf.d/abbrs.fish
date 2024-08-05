@@ -30,7 +30,6 @@ if type -q kubectl
     abbr kx 'kubectl exec -it'
 end
 
-# k9s
 if type fdfind -q
     abbr fd fdfind
 end
@@ -41,23 +40,28 @@ if type -q k9s
     abbr ks k9s
 end
 
-# the fuck
 if type -q thefuck
     abbr f fuck
 end
 
-# the exa
 if type -q exa
     abbr ls exa
 end
 
-# bat
 if type -q batcat
     abbr cat batcat
 end
 
+# terraform
+if type -q terraform
+    abbr tf terraform
+end
 
-# tmux
+# terraform
+if type -q kubectl
+    abbr k kubectl
+end
+
 if type -q tmux
     abbr ta 'tmux attach -t'
     abbr tn 'tmux new -s'
@@ -68,8 +72,6 @@ end
 # easy workspace access
 abbr cw 'cd $HOME/workspace'
 abbr dl 'cd $HOME/Downloads/'
-abbr dotfiles 'nvim $HOME/workspace/dotfiles/'
-abbr nexus 'nvim $HOME/workspace/nexus/'
 
 # basic abbreviations
 abbr df 'df -h' # human-readable sizes
