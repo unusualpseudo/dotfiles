@@ -19,7 +19,6 @@ k9s:
     limits:
       cpu: 100m
       memory: 100Mi
-
   logger:
     tail: 100
     buffer: 5000
