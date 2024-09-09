@@ -16,7 +16,6 @@ tasks:
       - chmod +x "{{.SCRIPTS_DIR}}/sync-config.sh"
       - "{{.SCRIPTS_DIR}}/sync-config.sh"
 
-
   fish-shell:
     desc: "change default shell"
     cmds:
