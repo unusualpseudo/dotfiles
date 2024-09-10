@@ -6,18 +6,20 @@ the project holds and sync my dotfiles config with the home config folder.
 
 ## Setup Instructions
 
-
 ```sh
 # clone the repo
 git clone https://github.com/unusualpseudo/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 # use gotask to run the sync of the config folder and setup fish and tmux
-task dotfiles:setup
+chmod +x sync.sh
+./sync.sh
 ```
 
 # Setup Fisher
+
 fisher is a package manager for fish, here we install fisher with the plugin
 [fzf.fish](https://github.com/PatrickF1/fzf.fish)
+
 ```sh
 # go home
 cd
