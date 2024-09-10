@@ -40,19 +40,15 @@ if type -q k9s
     abbr ks k9s
 end
 
-if type -q thefuck
-    abbr f fuck
-end
-
 if type -q exa
     abbr ls exa
 end
 
 if type -q batcat
+    abbr bat batcat
     abbr cat batcat
 end
 
-# terraform
 if type -q terraform
     abbr tf terraform
 end

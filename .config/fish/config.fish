@@ -19,9 +19,5 @@ if type -q direnv
     direnv hook fish | source
 end
 
-if type -q thefuck
-    thefuck --alias | source
-end
-
 # krew
 set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin

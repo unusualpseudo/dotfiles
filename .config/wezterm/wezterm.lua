@@ -9,6 +9,8 @@ config.window_decorations = 'NONE'
 
 config.color_scheme = 'AdventureTime'
 
+config.font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true })
+
 config.background = {
     {
         source = {
