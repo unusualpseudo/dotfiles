@@ -16,6 +16,8 @@ task dotfiles:setup
 ```
 
 # Setup Fisher
+fisher is a package manager for fish, here we install fisher with the plugin
+[fzf.fish](https://github.com/PatrickF1/fzf.fish)
 ```sh
 # go home
 cd
