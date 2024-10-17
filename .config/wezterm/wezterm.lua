@@ -14,7 +14,7 @@ config.font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true })
 config.background = {
     {
         source = {
-            File = wezterm.home_dir .. '/Pictures/wallpaper/cat.jpg'
+            File = wezterm.home_dir .. '/Pictures/wallpaper/space.jpg'
         },
         hsb = { brightness = 0.2 }
     }

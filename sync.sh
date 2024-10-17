@@ -69,3 +69,7 @@ backup_config
 
 # Call the function to process files and create symbolic links
 process_files
+
+# make fish default shell
+# shellcheck disable=SC2046
+chsh -s $(which fish)
